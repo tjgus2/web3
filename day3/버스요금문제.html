@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버스요금문제</title>
+</head>
+<body>
+    <script>
+        let age = prompt("당신의 나이를 입력하세요");
+        if ( age >= 0 && age <= 7) {
+            document.write("유아 버스비는 800원입니다");
+        }
+        else if (age >= 8 && age <= 19) {
+            document.write("학생 버스비는 1,200원입니다");
+        }
+        else if (age >= 20 && age <= 34) {
+            document.write("청년 버스비는 1,600원입니다");
+        }
+        else if (age >= 35 && age <= 59) {
+            document.write("중년 버스비는 2,000원입니다");
+        }
+        else if (age >= 60 && age <= 150) {
+            document.write("노년 버스비는 무료입니다");
+        }
+        else {
+            document.write("무언가 잘못되었다.. 사람의 나이가 어떻게" + age + "살?");
+        }
+    </script>
+</body>
+</html>

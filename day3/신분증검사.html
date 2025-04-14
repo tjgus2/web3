@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신분증 검사</title>
+</head>
+<body>
+    <script>
+        let age = prompt("당신의 나이를 입력하세요");
+        let identityCard = confirm("신분증을 소지하고 있나요?")
+
+        if (age >= 20 && identityCard) {
+            document.write(age + "살" + " / 신분증 확인 완료! 입장이 가능하세요");
+        }
+
+        else if (18 <= age < 20 && identityCard) {
+            document.write("18세 이상이며 신분증을 소지함! 입장 가능하나 22시에 퇴장해주세요");
+        }
+
+        else if (age < 18 || !identityCard) {
+            document.write("입장이 불가능하세요");
+        }
+
+        else {
+            document.write("관리자에게 문의하세요");
+        }
+    </script>
+</body>
+</html>

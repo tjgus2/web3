@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+</head>
+<body>
+    <script>
+        /*
+        if (조건식) {
+            자바스크립트 코드;
+        }
+        조건식은 Boolean 메소드와 마찬가지로 true, false만 반환함
+        - 조건식 부분에 0이 들어가면 false를 반환함
+        */
+
+        let num = 10;
+        
+        if (num < 500) {
+            document.write("조건이 참입니다", "<br>");
+        }
+
+        let zero = 0;
+        if (zero) {
+            document.write("false입니다.", "<br>");
+        }
+
+        // let walkCount = prompt("당신은 하루 몇 보 걷나요?!");
+
+        // if (walkCount > 10000) {
+        //     document.write("좋은 습관을 지니고 계시는군요! <br>");
+        // }
+
+        document.write("========the end=========", "<br>");
+
+        /*
+            if(조건식) {
+                조건식의 값이 true라면 이 코드가 실행됨
+            } else {
+                조건식의 값이 false라면 이 코드가 실행됨 
+            }
+        */
+
+        // let userNum = prompt("좋아하는 숫자를 입력하세요");
+
+        // if (userNum >= 10) {
+        //     document.write("당신이 좋아하는 숫자는 10 이상이군요");
+        // }
+        
+        // else {
+        //     document.write(" 당신이 좋아하는 숫자는 10 미만이군요");
+        // }
+
+        // let userNum = prompt("좋아하는 숫자를 입력하세요");
+
+        // if (userNum % 2 == 0) {
+        //     document.write("짝수입니다");
+        // } 
+        // else {
+        //     document.write("홀수입니다");
+        // }
+
+        // confirm("메시지를 확인하세요");
+
+        let userConfirm = confirm("탈퇴하시겠습니까?");
+        if (userConfirm) {
+            document.write("탈퇴 처리 되었습니다");
+        }
+        else {
+            document.write("탈퇴 취소되었습니다");
+        }
+
+        
+    </script>
+</body>
+</html>
