@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩if문</title>
+</head>
+<body>
+    <script>
+        /*
+            if(조건식1) {
+                자바스크립트 코드;
+                if(조건식2){
+                    자바스크립트 코드;
+                }
+            }
+        */
+
+        let a = 10;
+        let b = 20;
+        let c = 30;
+
+        if (a < b) {
+            document.write("1차 관문 조건이 참입니다. <br>");
+            if (b > c) {
+                document.write("2차 관문 조건도 참입니다");
+            }
+        }
+
+        let userId = prompt("아이디를 입력하세요");
+        // let userPassword = prompt("비밀번호를 입력하세요");
+        let id = "tjgus1234";
+        let password = "112233"
+
+        // if (id == userId) {
+        //     if (password == userPassword) {
+        //         document.write(id + "님 반갑습니다!");
+        //     }
+        //     else {
+        //         alert("비밀번호가 일치하지 않습니다");
+        //         // 확인 버튼만 존재하는 경고창
+        //         location.reload();
+        //     }
+        // }
+        // else {
+        //     alert("아이디가 일치하지 않습니다");
+        //     location.reload();
+        // }
+
+        if (id !== userId) {
+            alert("아이디가 일치하지 않습니다");
+            location.reload();
+        }
+        else {
+            let userPassword = prompt("비밀번호를 입력하세요");
+            if (password == userPassword) {
+                document.write(id + "님 반갑습니다!");
+            }
+            else {
+                alert("비밀번호가 일치하지 않습니다");
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배송비문제</title>
+</head>
+<body>
+    <script>
+        let totalPrice = prompt("구매금액을 입력하세요", "숫자만 입력해주세요");
+        let member = confirm("회원이세요?");
+
+        if (totalPrice >= 100000) {
+            document.write("100,000원 이상 구매로 사은품이 제공됩니다 <br>");
+            if (member) {
+                document.write("회원 50,000이상 구매 고객은 배송비도 무료입니다");
+            }
+            else {
+                document.write("비회원은 배송비 5,000원이 부과됩니다");
+            }
+        }
+        else if (totalPrice >= 50000) {
+            if (member) {
+                document.write("50,000원 이상 구매 회원은 배송비 무료입니다(사은품은 없음! 10만원 이상만 있는거임)")
+            }
+            else {
+                document.write("비회원은 배송비 5,000원이 부과됩니다")
+            }
+        }
+        else {
+            document.write("구매금액이 50,000원이 미만이면 배송비 5,000원이 부과됩니다.");
+        }
+
+    </script>
+</body>
+</html>
