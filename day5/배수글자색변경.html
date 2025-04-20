@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .multiple_5 {
+            color: red;
+        }
+
+        .multiple_7 {
+            color: green;
+        }
+
+        .multiple_5_7 {
+            color: aqua;
+        }
+    </style>
+    <title>배수글자색변경</title>
+</head>
+<body>
+    <script>
+        for (let i = 1; i <= 100; i++){
+            if (i % 5 == 0 && i % 7 != 0)  {
+                document.write("<p class= 'multiple_5'>" + i + "</p>");
+            }
+            else if (i % 5 != 0 && i % 7 == 0) {
+                document.write("<p class= 'multiple_7'>" + i + "</p>");
+            }
+            else if (i % 5 == 0 && i % 7 == 0) {
+                document.write("<p class= 'multiple_5_7'>" + i + "</p>");
+            }
+            else {
+                document.write(i + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
