@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체</title>
+</head>
+<body>
+    <script>
+        // 참조변수(인스턴스 이름) = new 생성함수();
+
+        let tv = new Object();
+        // tv라는 빈 상자객체를 만들었고 이제 이 tv라는 객체에 정보를 넣을 준비가 됨
+
+        tv.color = "pink";
+        // tv라는 상자에 컬러라는 속성을 부여하고 해당 속성값을 pink로 지정해줌!
+
+        tv.price = 300000;
+        // tv라는 상자에 가격이라는 속성을 부여하고 속성값을 30만원으로 지정!
+
+        tv.show = function() {
+            // 함수: 행동 메소드(기능을 묶어놓은 것이 함수)
+            // tv라는 객체에 새로운 속성인 show를 추가하고 그 속성에다가 함수를 넣어줌
+            // 함수라는 것은 기능 / 행동을 나타냄
+            // 함수의 이름은 원래 따로 지정해줘야 하지만 지금 show 속성에 = 대입연산자를 사용하여 작성했으니 함수 이름은 자동으로 show가 되는 것임
+
+            document.write(`tv색상 : ${this.color} <br>`);
+            document.write(`tv가격 : ${this.price} <br>`);
+            // this: 함수를 호출한 주체를 가리킴
+            // 지금 만들어준 함수는 show 속성에 들어감. show 속성은 tv의 속성임. 호출한 주체라는 것은 해당 함수, 속성의 주인 객체를 뜻함 -> tv가 되는 것
+
+            // 현재 tv라는 객체에다가 show를 만들어서 그 안에 행동 함수를 생성중임. 이 함수 안에 this라고 작성하면 함수가 작동할 객체를 참조하게 됨
+        }
+        document.write("<h2>만들어준 tv객체 메소드 호출해보기</h2>");
+        tv.show();
+        // color 혹은 price도 출력하려면 속성이기 때문에 출력하는 메소드(기능)을 만들어야 함
+        // 속성이란 현재 tv객체 기준 color/price를 뜻하며 객체가 가지고 있는 정보를 말함
+        // 메소드란 객체가 할 수 있는 행동을 말함
+
+        // function이란?
+        let animal = new Object();
+        let sh = new Object();
+
+        function sleep () {
+            document.write("잠자기");
+        }
+        // 함수만 생성을 하면 객체와 관계없이 원하는 곳에 넣어서 사용 가능함
+        // 메소드와 함수 둘 다 ()가 붙는데 어떻게 구분할까?
+        // 메소드는 객체의 속성으로 지정된 함수여야 함. 하지만 sleep()은 ()가 붙어있더라도 어떠한 객체의 속성이 아니고 단독으로 이름을 가지고 선언된 기능이기 때문에 함수라고 부름
+        sleep();
+
+        animal.sleep();
+        sh.sleep();
+    </script>
+</body>
+</html>
