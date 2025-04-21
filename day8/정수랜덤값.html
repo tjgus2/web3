@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정수랜덤값</title>
+</head>
+<body>
+    <script>
+        let randomNum = Math.floor(Math.random()*31);
+        // 0 < Math.random() < 1 이랬던 것이
+        // 0 < Math.random() * 11 < 11 (10.999999)
+        // 0 이상 30 이하
+        document.write(randomNum, "<br>");
+
+        // 60 이상 90 이하
+        randomNum = Math.floor(Math.random()*31) + 60;
+        document.write(randomNum);
+
+        // 50이상 100이하
+        randomNum = Math.floor(Math.random()*51) + 50;
+    </script>
+</body>
+</html>

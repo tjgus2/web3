@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬러맞추기</title>
+</head>
+<body>
+     <script>
+        document.write("<h1>컴퓨터가 생각하는 컬러 맞추기</h1>");
+
+        let color = prompt("빨강, 파랑, 노랑 중 택 1");
+        let random = Math.ceil(Math.random()*3);
+        let colorNum;
+
+        if (random === 1) colorNum = "빨강";
+        else if (random === 2) colorNum = "파랑";
+        else if (random === 3) colorNum = "노랑";
+
+        // switch (random) {
+        //     case 1: colorNum = "빨강";
+        //     break;
+        //     case 2: colorNum = "파랑";
+        //     break;
+        //     case 3: colorNum = "노랑";
+        //     break;
+        // }
+
+        if (color == colorNum) {
+            document.write(`<p>축하합니다! 컴퓨터가 생각하는 컬러는 ${color}입니다`);
+        }
+        else {
+            document.write(`<p>틀렸습니다! 컴퓨터가 생각하는 컬러는 ${color}입니다`);
+        }
+     </script>
+</body>
+</html>

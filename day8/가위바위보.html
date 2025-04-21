@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보</title>
+</head>
+<body>
+    <script>
+        let userGame = prompt("가위, 바위, 보 중 택 1");
+        let random = Math.ceil(Math.random()*3);
+        let ex;
+
+        if (random === 1) ex = "가위";
+        else if (random === 2) ex = "바위";
+        else if (random === 3) ex = "보";
+
+        if (userGame === ex) {
+            document.write(`비겼습니다! 컴퓨터도 ${ex}을 냈습니다`);
+        }
+        else if ((userGame == "가위" && ex == "바위") || (userGame == "바위" && ex == "보") || (userGame == "보" && ex == "가위")) {
+            document.write(`아쉽네요! 컴퓨터가 이겼습니다 ~ 컴퓨터는 ${ex}을 냈습니다`);
+        }
+        else {
+            document.write(`축하합니다 사용자가 이겼습니다~ 컴퓨터는 ${ex}을 냈습니다`);
+        }
+    </script>
+</body>
+</html>
