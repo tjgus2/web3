@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체평균</title>
+</head>
+<body>
+    <script>
+        let students = [
+            {name: "엘사", score: 85}, 
+            {name: "모아나", score: 92},
+            {name: "에리엘", score: 78},
+            {name: "라푼젤", score: 63},
+        ];
+
+        let totalScore = 0;
+        for (let i=0; i<students.length; i++){
+            totalScore += students[i].score;
+        }
+
+        let avgScore = Math.round(totalScore / students.length);
+        document.write(`평균: ${avgScore}`);
+    </script>
+
+</body>
+</html>
