@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>배열객체평균</title>
 </head>
+
 <body>
     <script>
         let students = [
-            {name: "엘사", score: 85}, 
-            {name: "모아나", score: 92},
-            {name: "에리엘", score: 78},
-            {name: "라푼젤", score: 63},
+            { name: "엘사", score: 85 },
+            { name: "모아나", score: 92 },
+            { name: "에리엘", score: 78 },
+            { name: "라푼젤", score: 63 },
         ];
 
         let totalScore = 0;
-        for (let i=0; i<students.length; i++){
+        for (let i = 0; i < students.length; i++) {
             totalScore += students[i].score;
         }
 
         let avgScore = Math.round(totalScore / students.length);
-        document.write(`평균: ${avgScore}`);
+        document.write(`평균: ${avgScore}<br>`);
+
+        // 최고점수인 학생찾기
+        // 만약 i번째 학생의 점수가 앞에 있는 학생의 점수보다 높다면 그 높은 점수를 대입할 것
+        let highScore = 0;
+        let topStundent;
+
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].score > highScore) {
+                highScore = students[i].score;
+                topStundent = students[i];
+            }
+        }
+        document.write(`최고점수 학생: ${topStundent.name}<br>`);
+
+        // 평균 이상의 학생만 출력하기
+        // 평균 이상의 학생을 저장할 빈 배열을 생성한 후 새 데이터를 삽입하면서 배열 출력
+        let passedStudents = [];
+        for (let i = 0; i < students.length; i++) {
+            if (avgScore <= students[i].score) {
+                passedStudents.push(students[i]);
+            }
+        }
+        for (let i = 0; i<passedStudents.length; i++) {
+            document.write(`${passedStudents[i].name}: ${passedStudents[i].score}<br>`);
+        }
+
     </script>
 
 </body>
+
 </html>
