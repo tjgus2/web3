@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>타이머</title>
 </head>
+
 <body>
     <script>
         /*
@@ -19,6 +21,25 @@
         6. 만약 유저에게 받은 시간이 감소할 때 0보다 크다면 남은시간: *초 출력
         7. 감소하던 시간이 0보다 작아지면 타이머 종료 후 타이머 종료! 출력
         */
+
+        let num = Number(prompt("타이머 시간을 입력하세요"));
+        let timer;
+
+        if (num <= 0 || isNaN(num)) {
+            location.reload();
+        } 
+        else {
+            let timer = setInterval(() => {
+                document.write(`${num}초 남음`, "<br>");
+                num--;
+
+                if (num < 0) {
+                    clearInterval(timer);
+                    document.write("종료!")
+                }
+            }, 1000)
+        }
     </script>
 </body>
+
 </html>
