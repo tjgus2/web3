@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        // 함수란? 기능을 저장하는 하나의 공간
+        // 채널 / 음량 / 유튜브 / 외부입력
+
+        /*
+        function 함수명() {
+            자바스크립트 코드;
+        }
+        ============================
+        참조변수 = function() {
+            자바스크립트 코드;   
+        }
+        */
+
+        let count = 0;
+        // 함수선언방식
+        function firstFunction() {
+            count++;
+            document.write(`안녕하세요 ${count}<br>`);
+        }
+
+        firstFunction();
+
+        // 변수에다가 익명의 함수를 할당하는 방식
+        let secondFunction = function() {
+            count++;
+            document.write(`안녕히계세요 ${count}<br>`);
+        }
+
+        secondFunction();
+
+        // 1번: script 코드의 어느 부분에선나 호출이 가능함(함수에서 사용한 변수선언 뒤)
+        // 2번: 변수만 호이스팅되며, 함수 
+    </script>
+</body>
+</html>

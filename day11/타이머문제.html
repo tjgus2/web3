@@ -22,23 +22,43 @@
         7. 감소하던 시간이 0보다 작아지면 타이머 종료 후 타이머 종료! 출력
         */
 
-        let num = Number(prompt("타이머 시간을 입력하세요"));
-        let timer;
+        // let num = Number(prompt("타이머 시간을 입력하세요"));
+        // let timer;
 
-        if (num <= 0 || isNaN(num)) {
-            location.reload();
-        } 
-        else {
-            let timer = setInterval(() => {
-                document.write(`${num}초 남음`, "<br>");
-                num--;
+        // if (num <= 0 || isNaN(num)) {
+        //     location.reload();
+        // } 
+        // else {
+        //     let timer = setInterval(() => {
+        //         document.write(`${num}초 남음`, "<br>");
+        //         num--;
 
-                if (num < 0) {
-                    clearInterval(timer);
-                    document.write("종료!")
-                }
-            }, 1000)
+        //         if (num < 0) {
+        //             clearInterval(timer);
+        //             document.write("종료!")
+        //         }
+        //     }, 1000)
+        // }
+
+        let userTime = Number(prompt("타이머 시간을 입력하세요: "));
+
+        if (isNaN(userTime) || userTime <= 0) {
+            document.write("올바른 시간을 입력하세요");
         }
+        else {
+            document.write(`타이머 시작 ${userTime}초 남음<br>`);
+            let timer = setInterval(() => {
+                userTime--;
+                if (userTime > 0) {
+                    document.write(`남은시간: ${userTime}초 <br>`);
+                }
+                else {
+                    clearInterval(timer);
+                    document.write("타이머 종료");
+                }
+            }, 1000);
+        }
+
     </script>
 </body>
 
