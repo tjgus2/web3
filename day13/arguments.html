@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments</title>
+</head>
+<body>
+    <script>
+        function showArguments() {
+            console.log(arguments);       
+            console.log(arguments[0]);    
+            console.log(arguments[1]);   
+        }
+
+        showArguments(10, 20); 
+
+        /*
+        sum이라는 더하기 함수를 생성함
+        함수 안에 total = 0 이라는 변수를 생성함. 해당 변수에는 arguments가 들어갈 것임
+        반복문을 통해 argument의 개수만큼 i를 반복시킴
+        반복문의 조건이 참이라면 total에 argument의 n번째 값을 계속 쌓으면 더해줌
+        argument가 1, 2, 3, 4, 5라면 합계: 15 출력력
+        */
+
+        function sum() {
+            let total = 0;
+            for (let i = 0; i<arguments.length; i++) {
+                total += arguments[i];
+            }
+            document.write(`합계: ${total}`);
+        }
+
+        sum(1, 2, 3, 4, 5);
+    </script>
+</body>
+</html>
